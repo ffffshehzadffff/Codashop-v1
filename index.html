@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Mobile UC Redeem - Codashop Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">codashop</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for games...">
+                <i class="fas fa-search"></i>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="product-header">
+            <img src="images/pubg-banner.jpg" alt="PUBG Mobile" class="banner">
+            <div class="product-info">
+                <h1>PUBG MOBILE UC Redeem Code</h1>
+                <p>Buy PUBG Mobile UC redeem codes and pay using your local payment methods. No registration or login required!</p>
+            </div>
+        </section>
+        <section class="purchase-flow">
+            <div class="step">
+                <h2><span>1</span> Enter Player ID</h2>
+                <div class="input-group">
+                    <input type="text" id="player-id" placeholder="Enter Player ID">
+                    <button class="ok-btn">OK</button>
+                </div>
+                 <p class="info-text">To find your Player ID, open the game and tap your avatar.</p>
+            </div>
+            <div class="step">
+                <h2><span>2</span> Select Recharge</h2>
+                <div class="grid-container" id="uc-options">
+                    <div class="grid-item" data-price="250 PKR" data-uc="60 UC">60 UC</div>
+                    <div class="grid-item" data-price="750 PKR" data-uc="300 + 25 UC">300 + 25 UC</div>
+                    <div class="grid-item" data-price="1,500 PKR" data-uc="600 + 60 UC">600 + 60 UC</div>
+                    <div class="grid-item" data-price="3,750 PKR" data-uc="1500 + 300 UC">1500 + 300 UC</div>
+                    <div class="grid-item" data-price="7,500 PKR" data-uc="3000 + 850 UC">3000 + 850 UC</div>
+                    <div class="grid-item" data-price="15,000 PKR" data-uc="6000 + 2100 UC">6000 + 2100 UC</div>
+                </div>
+            </div>
+            <div class="step">
+                <h2><span>3</span> Select Payment</h2>
+                <div class="grid-container" id="payment-options">
+                    <div class="grid-item payment-item" data-payment="Easypaisa"><img src="images/easypaisa.png" alt="Easypaisa"> Easypaisa</div>
+                    <div class="grid-item payment-item" data-payment="JazzCash"><img src="images/jazzcash.png" alt="JazzCash"> JazzCash</div>
+                    <div class="grid-item payment-item" data-payment="Credit Card"><img src="images/card.png" alt="Credit Card"> Credit/Debit Card</div>
+                </div>
+            </div>
+            <div class="step">
+                 <h2><span>4</span> Buy!</h2>
+                 <p class="info-text">Enter your email to receive a receipt of your purchase (optional).</p>
+                 <input type="email" id="email" placeholder="E-mail Address">
+                 <button id="buy-now-btn" class="buy-now">Buy Now</button>
+            </div>
+        </section>
+    </main>
+    <div id="confirmation-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Order Confirmation</h2>
+            <div class="order-details">
+                <p><strong>Player ID:</strong> <span id="confirm-player-id"></span></p>
+                <p><strong>UC Amount:</strong> <span id="confirm-uc"></span></p>
+                <p><strong>Price:</strong> <span id="confirm-price"></span></p>
+                <p><strong>Payment Method:</strong> <span id="confirm-payment"></span></p>
+            </div>
+            <button class="confirm-purchase-btn">Confirm & Go to Payment</button>
+            <p class="fake-info">(This is a demo. No actual payment will be processed.)</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
